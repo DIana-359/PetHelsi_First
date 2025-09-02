@@ -1,0 +1,21 @@
+.heroImageContainer {
+  padding: 28px 16px 8px 16px;
+  width: 343px;
+  background-color: var(--bg-color);
+}
+.image {
+  display: block;
+  width: 343px;
+  height: 226px;
+  border-radius: 20px;
+}
+@media screen and (min-width: 1440px) {
+  .heroImageContainer {
+    width: 1294px;
+    padding: 24px 73px 0 73px;
+  }
+  .image {
+    width: 1294px;
+    height: 358px;
+  }
+}

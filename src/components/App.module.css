@@ -1,0 +1,11 @@
+.appContainer {
+  width: 375px;
+  background-color: var(--bg-color);
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1440px) {
+  .appContainer {
+    width: 1440px;
+  }
+}

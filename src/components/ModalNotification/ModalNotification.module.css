@@ -1,0 +1,80 @@
+.modalNotification {
+  width: 311px;
+  position: relative;
+  padding: 48px 16px 32px 16px;
+  background-color: var(--bg-color);
+  border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.iconClose {
+  width: 24px;
+  height: 24px;
+  stroke: var(--accent-color-dark);
+}
+.buttonClose {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  cursor: pointer;
+}
+.modalNotificationTitle {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  color: var(--text-color-dark);
+  margin-bottom: 12px;
+}
+.modalNotificationText {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+  text-align: center;
+  color: var(--text-color-dark);
+  margin-bottom: 32px;
+}
+.modalClose {
+  border: none;
+  display: block;
+  background-color: transparent;
+  padding: 11px 125px;
+  border-radius: 8px;
+  background-color: var(--accent-color-dark);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  color: var(--text-color-white);
+  margin: 0 auto;
+  cursor: pointer;
+}
+.modalClose:hover {
+  background-color: var(--accent-color-light);
+}
+.buttonClose:hover .iconClose {
+  stroke: var(--accent-color-light);
+}
+@media screen and (min-width: 1440px) {
+  .modalNotification {
+    width: 560px;
+    padding: 64px 59.5px 56px 59.5px;
+    border-radius: 16px;
+  }
+  .modalNotificationTitle {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    margin-bottom: 8px;
+  }
+  .modalNotificationText {
+    font-size: 16px;
+    line-height: 22.4px;
+  }
+  .modalClose {
+    padding: 14px 141px;
+  }
+}

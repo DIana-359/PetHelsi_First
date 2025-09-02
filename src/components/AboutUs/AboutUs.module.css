@@ -1,0 +1,56 @@
+.aboutUsContainer {
+  padding: 24px 16px 40px 16px;
+  width: 343px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.aboutUsTitle {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 33.6px;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--text-color-dark);
+}
+.aboutUsPet {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: var(--text-color-gray);
+}
+.aboutUsDesire {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  .aboutUsContainer {
+    padding: 200px 72px 100px 72px;
+    width: 1294px;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .aboutText {
+    width: 667px;
+  }
+  .aboutUsTitle {
+    font-size: 36px;
+    line-height: 50.4px;
+  }
+  .aboutUsPet {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.2px;
+    margin-bottom: 24px;
+  }
+  .aboutUsDesire {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.2px;
+    color: var(--text-color-gray);
+  }
+}

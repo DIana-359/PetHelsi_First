@@ -1,0 +1,8 @@
+.homePageContainer{
+    padding-top: 69px;
+}
+@media screen and (min-width: 1440px) {
+    .homePageContainer{
+        padding-top: 126px;
+    }
+}

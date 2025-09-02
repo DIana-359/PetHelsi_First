@@ -1,0 +1,29 @@
+.modalMenuContainer {
+  position: fixed;
+  top: 64px;
+  width: 100%;
+  height: calc(100vh - 128px);
+  max-width: 375px;
+  min-height: 385px;
+  background-color: var(--bg-color);
+  z-index: 99;
+  padding-top: 143px;
+}
+.navigationList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+.navListItem {
+  font-size: 16px;
+  color: var(--text-color-dark);
+  font-weight: 600;
+  line-height: 22.4px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.navListItem:hover {
+  color: var(--accent-color-dark);
+}

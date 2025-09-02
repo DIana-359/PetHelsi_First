@@ -1,0 +1,56 @@
+.formLandingContainer {
+  padding: 44px 16px;
+  background-color: var(--bg-color);
+  position: relative;
+}
+.formLandingTitle {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: left;
+  color: var(--text-color-dark);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.formLandingTitleEmail {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--text-color-dark);
+  text-transform: uppercase;
+}
+.transfer {
+  display: none;
+}
+.iconArrow {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .formLandingContainer {
+    padding: 44px 296px 102px 304px;
+  }
+  .formLandingTitle {
+    width: 533px;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 39.2px;
+    text-align: center;
+    margin: 0 auto 32px auto;
+  }
+  .formLandingTitleEmail {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 39.2px;
+  }
+  .transfer {
+    display: inline;
+  }
+  .iconArrow {
+    display: block;
+    stroke: var(--text-color-dark);
+    position: absolute;
+    right: 228px;
+    top: 115px;
+  }
+}
