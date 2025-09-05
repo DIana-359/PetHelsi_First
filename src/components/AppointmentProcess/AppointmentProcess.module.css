@@ -105,7 +105,7 @@
   .appointmentTitle {
     font-weight: 600;
     font-size: 40px;
-    line-height: 56px;
+    line-height: 1.4;
     letter-spacing: 0;
     text-transform: uppercase;
     margin-bottom: 48px;
@@ -127,14 +127,14 @@
   .title {
     font-size: 24px;
     font-weight: 500;
-    line-height: 24px;
+    line-height: 1.4;
     letter-spacing: 0;
     margin-bottom: 8px;
   }
   .text {
     font-size: 16px;
     font-weight: 500;
-    line-height: 18px;
+    line-height: 1.4;
     letter-spacing: 0;
   }
   .widthText1 {
@@ -154,14 +154,14 @@
     width: 230px;
     height: 321px;
     right: -19px;
-    bottom: -34px;
+    bottom: 20px;
     z-index: 2;
   }
   .appointmentVector {
     display: block;
     position: absolute;
-    right: -19px;
-    bottom: -36px;
+    right: -20px;
+    bottom: 2px;
   }
   .break {
     display: none;

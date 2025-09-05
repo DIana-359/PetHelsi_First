@@ -56,7 +56,7 @@ export default function Form({
   return (
     <>
       <form onSubmit={getData} className={clsx(style.formLandingForm)}>
-        <div className={style.selectContainer}>
+        <div className={style.selectContainer} onClick={toggleOptions}>
           <div
             name="ROLE"
             id="mce-ROLE"
@@ -64,15 +64,15 @@ export default function Form({
               style.formLandingSelect,
               style[customClassSelect],
               openOptions && style.focused
-            )}
-            onClick={toggleOptions}>
+            )}>
             Я - {values.role === "owner" ? "власник тварини" : "ветеринар"}
           </div>
           {openOptions && (
             <ul className={style.optionValues}>
               <li
                 value="owner"
-                onClick={() => {
+                onClick={e => {
+                  e.stopPropagation();
                   setValues({ ...values, role: "owner" });
                   setOpenOptions(false);
                 }}
@@ -81,7 +81,8 @@ export default function Form({
               </li>
               <li
                 value="doctor"
-                onClick={() => {
+                onClick={e => {
+                  e.stopPropagation();
                   setValues({ ...values, role: "doctor" });
                   setOpenOptions(false);
                 }}
