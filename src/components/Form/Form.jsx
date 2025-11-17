@@ -6,7 +6,6 @@ import clsx from "clsx";
 import ModalNotification from "../ModalNotification/ModalNotification";
 import style from "./Form.module.css";
 
-const publicKeyMAILCHIMP = import.meta.env.VITE_MAILCHIMP_API_KEY;
 const audienceId = import.meta.env.VITE_MAILCHIMP_AUDIENCE_ID;
 const server = import.meta.env.VITE_MAILCHIMP_SERVER;
 export default function Form({

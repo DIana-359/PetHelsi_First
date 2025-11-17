@@ -1,5 +1,5 @@
 .appointmentContainer {
-  width: 343px;
+  width: 100%;
   padding: 44px 16px 60px 16px;
 }
 .appointmentPicture {
@@ -7,7 +7,7 @@
 }
 .appointmentListWrapper {
   position: relative;
-  padding: 40px 8px 40px 24px;
+  padding: 40px 20px 40px 24px;
   background-color: var(--accent-color-dark);
   border-radius: 20px;
 }
@@ -48,10 +48,10 @@
   margin-bottom: 4px;
 }
 .widthText1 {
-  width: 230px;
+  min-width: 230px;
 }
 .widthText2 {
-  width: 240px;
+  min-width: 230px;
 }
 .text {
   font-size: 14px;
@@ -59,9 +59,10 @@
   line-height: 19.6px;
   text-align: left;
   color: var(--text-color-white);
+  min-width: 230px;
 }
 .textLast {
-  width: 200px;
+  min-width: 230px;
   font-size: 14px;
   font-weight: 400;
   line-height: 19.6px;
@@ -78,9 +79,36 @@
 .appointmentVector {
   display: none;
 }
+
+@media screen and (min-width: 768px) {
+  .appointmentTitle {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+  .title {
+    font-size: 20px;
+    line-height: 1;
+  }
+  .widthText1 {
+    max-width: 470px;
+    font-size: 16px;
+    line-height: 1;
+  }
+  .widthText2 {
+    max-width: 470px;
+    font-size: 16px;
+    line-height: 1;
+  }
+  .textLast {
+    max-width: 470px;
+    font-size: 16px;
+    line-height: 1;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   .appointmentContainer {
-    width: 1296px;
+    width: 1440px;
     padding: 102px 72px 100px 72px;
     display: flex;
     align-items: start;
@@ -121,33 +149,35 @@
     width: 30px;
     height: 60px;
     font-size: 50px;
-    line-height: 60px;
+    line-height: 1;
     text-align: left;
   }
   .title {
     font-size: 24px;
     font-weight: 500;
-    line-height: 1.4;
+    line-height: 1.3;
     letter-spacing: 0;
     margin-bottom: 8px;
   }
   .text {
     font-size: 16px;
     font-weight: 500;
-    line-height: 1.4;
+    line-height: 1.2;
     letter-spacing: 0;
   }
   .widthText1 {
     width: auto;
+    line-height: 1.2;
   }
   .widthText2 {
     width: auto;
+    line-height: 1.2;
   }
   .textLast {
     width: 446px;
     font-size: 16px;
     font-weight: 500;
-    line-height: 18px;
+    line-height: 1.2;
     letter-spacing: 0;
   }
   .appointmentCat {
@@ -162,8 +192,5 @@
     position: absolute;
     right: -20px;
     bottom: 2px;
-  }
-  .break {
-    display: none;
   }
 }

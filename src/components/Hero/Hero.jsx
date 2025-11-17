@@ -2,7 +2,7 @@ import decor from "../../assets/Images/vector.png";
 import Form from "../../components/Form/Form";
 import Icon from "../Icon/Icon";
 import spriteSistem from "../../assets/Images/sprite-sistem.svg";
-import dog from "../../assets/Images/dog.gif"
+import dog from "../../assets/Images/dog.gif";
 import style from "./Hero.module.css";
 
 export default function Hero({
@@ -42,11 +42,7 @@ export default function Hero({
           </div>
         </div>
         <div className={style.imageContainer}>
-          <img
-            src={dog}
-            alt="Logo"
-            className={style.heroDog}
-          />
+          <img src={dog} alt="Logo" className={style.heroDog} />
           <img src={decor} alt="" className={style.heroDecor} />
           <p className={style.heroDesktopNotification}>Сервіс ще у розробці</p>
           <Icon

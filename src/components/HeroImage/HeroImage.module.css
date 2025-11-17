@@ -1,21 +1,25 @@
 .heroImageContainer {
   padding: 28px 16px 8px 16px;
-  width: 343px;
+  width: 100%;
+  max-width: 1296px;
   background-color: var(--bg-color);
 }
 .image {
   display: block;
-  width: 343px;
-  height: 226px;
+  width: 100%;
+  min-width: 343px;
+  height: auto;
   border-radius: 20px;
 }
+
 @media screen and (min-width: 1440px) {
   .heroImageContainer {
-    width: 1294px;
+    width: 1440px;
+    max-width: none;
     padding: 24px 73px 0 73px;
   }
   .image {
-    width: 1294px;
+    width: 1296px;
     height: 358px;
   }
 }
