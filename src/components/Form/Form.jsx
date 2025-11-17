@@ -20,6 +20,7 @@ export default function Form({
 }) {
   const [notificationIsOpen, setNotificationIsOpen] = useState(false);
   const [openOptions, setOpenOptions] = useState(false);
+  const [modalEmail, setModalEmail] = useState("");
 
   const getData = async event => {
     event.preventDefault();
@@ -28,8 +29,9 @@ export default function Form({
     formData.append("EMAIL", values.email);
     formData.append("ROLE", values.role);
 
+    setModalEmail(values.email);
     try {
-      const response = await fetch(
+      await fetch(
         `https://pethelsi.${server}.list-manage.com/subscribe/post?u=86017a9d314f1ebc8482afde3&id=${audienceId}`,
         {
           method: "POST",
@@ -124,6 +126,7 @@ export default function Form({
             id="mce-EMAIL"
             className={clsx(style.formLandingInput, style[customClassInput])}
             placeholder="Ваш E-mail"
+            value={values.email}
             onChange={ev => setValues({ ...values, email: ev.target.value })}
             required
           />
@@ -148,7 +151,7 @@ export default function Form({
       <ModalNotification
         notificationIsOpen={notificationIsOpen}
         closeModalNotification={closeModalNotification}
-        email={values.email}
+        email={modalEmail}
       />
     </>
   );

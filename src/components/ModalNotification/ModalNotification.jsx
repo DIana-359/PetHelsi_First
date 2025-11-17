@@ -11,14 +11,6 @@ export default function ModalNotification({
   closeModalNotification,
   email,
 }) {
-  const [isEmail, setIsEmail] = useState(null);
-
-  useEffect(() => {
-    if (email) {
-      setIsEmail(email);
-    }
-  }, [email]);
-
   return (
     <Modal
       isOpen={notificationIsOpen}
@@ -44,8 +36,8 @@ export default function ModalNotification({
       </button>
       <p className={style.modalNotificationTitle}>Тепер ви з нами!</p>
       <p className={style.modalNotificationText}>
-        Ваш E-mail {isEmail} додано до списку очікування. Ми повідомимо вас,
-        коли сервіс стане доступним.
+        Ваш E-mail {email} додано до списку очікування. Ми повідомимо вас, коли
+        сервіс стане доступним.
       </p>
 
       <button
