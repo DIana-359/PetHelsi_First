@@ -12,16 +12,10 @@
   align-items: center;
   background-color: var(--bg-color);
   z-index: 999;
+  border-bottom: 1px solid var(--header-border);
 }
-.headerContainer::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 343px;
-  height: 1px;
-  background-color: var(--header-border);
+.headerBorder {
+  border-color: var(--bg-color);
 }
 .icon {
   fill: var(--accent-color-dark);
@@ -31,10 +25,8 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-}
-.iconBurger {
-  stroke: var(--accent-color-dark);
   transition: stroke 0.3s ease;
+  stroke: var(--accent-color-dark);
 }
 .buttonMenu:hover .iconBurger {
   stroke: var(--accent-color-light);
@@ -42,20 +34,11 @@
 .navigationList {
   display: none;
 }
-
-.buttonClose {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
 .iconClose {
   stroke: var(--accent-color-dark);
   transition: stroke 0.3s ease;
 }
-.buttonClose:hover .iconClose {
+.buttonMenu:hover .iconClose {
   stroke: var(--accent-color-light);
 }
 
@@ -64,9 +47,6 @@
     width: 1296px;
     max-width: 1296px;
     padding: 32px 72px;
-  }
-  .headerContainer::after {
-    display: none;
   }
   .icon {
     width: 196px;

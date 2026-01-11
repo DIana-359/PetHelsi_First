@@ -19,8 +19,8 @@ export default function Hero({
         <div>
           <div className={style.heroBox}>
             <h1 className={style.heroTitle}>
-              ВЕТЕРИНАРНА <span className={style.time}>24/7</span> ОНЛАЙН
-              КОНСУЛЬТАЦІЯ
+              ВЕТЕРИНАРНА <br className={style.break} />
+              <span className={style.time}>24/7</span> ОНЛАЙН КОНСУЛЬТАЦІЯ
             </h1>
             <p className={style.heroText}>
               {isDesktop

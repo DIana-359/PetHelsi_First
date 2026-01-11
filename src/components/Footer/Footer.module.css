@@ -73,10 +73,32 @@
 }
 
 @media screen and (min-width: 768px) {
+  .footerImgWrapper {
+    margin-bottom: -30px;
+    width: 112px;
+    height: 100px;
+  }
+  .imgFish {
+    width: 108px;
+    height: 100px;
+  }
+  .footerDecor {
+    width: 112px;
+    height: 37.03px;
+    bottom: 5px;
+    right: 2px;
+  }
+  .footerDecor {
+    width: 112px;
+    height: 37px;
+  }
+  .footerNavList {
+    flex-grow: 1;
+  }
   .footerContainer {
     flex-direction: row;
     align-items: start;
-    gap: 150px;
+    gap: 100px;
   }
 }
 

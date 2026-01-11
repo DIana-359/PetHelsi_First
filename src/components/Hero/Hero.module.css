@@ -69,19 +69,15 @@
     font-size: 16px;
     line-height: 1.5;
   }
-
   .heroTitle {
-    text-align: center;
+    text-align: left;
     font-size: 38px;
     line-height: 1.5;
   }
-
   .heroText {
     font-size: 16px;
     line-height: 1.5;
-    text-align: center;
-    width: 540px;
-    margin: 0 auto;
+    text-align: left;
   }
   .heroForm {
     width: 659px;
@@ -117,6 +113,9 @@
     text-align: left;
   }
   .time {
+    display: none;
+  }
+  .break {
     display: none;
   }
   .heroTitle::after {

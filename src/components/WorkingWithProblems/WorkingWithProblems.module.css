@@ -45,13 +45,18 @@
   color: var(--text-color-dark);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 376px) {
   .workingTitle {
     width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .workingTitle {
     font-size: 20px;
     font-weight: 600;
     line-height: 28px;
-    text-align: center;
     text-transform: uppercase;
     color: var(--text-color-dark);
     margin-bottom: 24px;
@@ -59,6 +64,9 @@
   .workingList {
     width: calc(234px * 3 + 16px);
     gap: 16px;
+  }
+  .workingListItem {
+    width: 262px;
   }
   .icon {
     width: 36px;
@@ -87,7 +95,6 @@
     width: calc(306px * 4 + 72px);
   }
   .workingListItem {
-    width: 262px;
     padding: 24px 22px;
     flex-direction: row;
     justify-content: flex-start;

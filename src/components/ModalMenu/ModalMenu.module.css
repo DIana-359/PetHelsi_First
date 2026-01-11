@@ -1,8 +1,8 @@
 .modalMenuContainer {
   position: fixed;
-  top: 64px;
+  top: 69px;
   width: 100%;
-  height: calc(100vh - 64px);
+  height: calc(100vh - 69px);
   max-width: 768px;
   background-color: var(--bg-color);
   z-index: 999;

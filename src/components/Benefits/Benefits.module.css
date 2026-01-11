@@ -51,6 +51,9 @@
   .benefitsList {
     margin: 0 auto;
   }
+  .benefitsListItem {
+    width: 262px;
+  }
 }
 
 @media screen and (min-width: 768px) {
