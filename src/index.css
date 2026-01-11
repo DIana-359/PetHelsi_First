@@ -23,7 +23,11 @@
 html {
   scroll-padding-top: 68px;
 }
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 body {
   font-family: "Lato", system-ui, Avenir, Helvetica, Arial, sans-serif;
   padding: 0;

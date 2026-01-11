@@ -10,12 +10,15 @@ export default function FormLanding({ values, setValues, errors, setErrors }) {
         Залиште свій <span className={style.formLandingTitleEmail}>E-mail</span>
         <br className={style.transfer}></br> і ми повідомимо вас про запуск{" "}
       </h2>
-      <Form
-        values={values}
-        setValues={setValues}
-        errors={errors}
-        setErrors={setErrors}
-      />
+      <div className={style.formLanding}>
+        <Form
+          values={values}
+          setValues={setValues}
+          errors={errors}
+          setErrors={setErrors}
+        />
+      </div>
+
       <Icon
         sprite={spriteSistem}
         id={"icon-Arrow"}

@@ -60,7 +60,7 @@ export default function AppointmentProcess({ isDesktop }) {
               <h3 className={style.title}>Сплатіть консультацію</h3>
               <p className={style.textLast}>
                 Наша платформа підтримує різні платіжні системи. Здійсніть
-                оплату <br className={style.break} /> та проконсультуйтеся
+                оплату та проконсультуйтеся
                 <br className={style.break} /> з ветеринаром
               </p>
             </div>

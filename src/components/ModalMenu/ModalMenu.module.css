@@ -1,12 +1,11 @@
 .modalMenuContainer {
   position: fixed;
-  top: 64px;
+  top: 69px;
   width: 100%;
-  height: calc(100vh - 128px);
-  max-width: 375px;
-  min-height: 385px;
+  height: calc(100vh - 69px);
+  max-width: 768px;
   background-color: var(--bg-color);
-  z-index: 99;
+  z-index: 999;
   padding-top: 143px;
 }
 .navigationList {

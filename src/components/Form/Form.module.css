@@ -4,11 +4,8 @@
 .selectContainer {
   position: relative;
 }
-.inputContainer {
-  position: relative;
-  margin-bottom: 16px;
-}
 .formLandingSelect {
+  width: 100%;
   margin: 0 auto 12px auto;
   padding: 10px 12px 10px 46px;
   outline: none;
@@ -71,10 +68,14 @@
   right: 8px;
   color: var(--accent-color-dark);
 }
+.inputContainer {
+  width: 100%;
+  position: relative;
+  margin-bottom: 16px;
+}
 .formLandingInput {
   display: block;
   width: 100%;
-  max-width: 284px;
   padding: 10px 12px 10px 46px;
   outline: none;
   border: 1px solid var(--input-def);
@@ -116,14 +117,15 @@
 }
 .button {
   width: 100%;
-  padding: 11px 73px;
+  padding: 12px;
   border: none;
   border-radius: 8px;
   background-color: var(--accent-color-dark);
   font-size: 16px;
   font-weight: 400;
-  line-height: 22.4px;
-  text-align: left;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
   color: var(--text-color-white);
   display: block;
   margin: 0 auto;
@@ -135,8 +137,8 @@
 }
 .error {
   position: absolute;
-  bottom: -20px;
-  font-size: 14px;
+  bottom: -19px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 22.4px;
   text-align: left;
@@ -148,11 +150,22 @@
 }
 .wideFieldsInput {
   font-size: 14px;
-  width: 214px;
 }
 .wideFieldsButton {
-  width: 272px;
+  width: 100%;
   padding: 11px 49px;
+}
+
+@media screen and (min-width: 768px) {
+  .formLandingSelect {
+    font-size: 16px;
+  }
+  .optionValues {
+    font-size: 16px;
+  }
+  .wideFieldsInput {
+    font-size: 16px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -160,14 +173,19 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    width: 792px;
   }
   .inputContainer {
+    width: 267px;
     margin-bottom: 0;
   }
+  .wideFieldsInput {
+    font-size: 14px;
+    width: 267px;
+  }
   .formLandingSelect {
-    width: 220px;
     margin: 0;
-    font-size: 16px;
+    width: 280px;
   }
   .optionValues {
     bottom: -114px;
@@ -178,7 +196,6 @@
     padding: 16px 12.5px 8px 12.5px;
   }
   .formLandingInput {
-    width: 219px;
     padding: 11px 0 11px 46px;
     margin: 0;
     font-size: 16px;

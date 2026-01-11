@@ -2,6 +2,7 @@
   padding: 44px 16px;
   background-color: var(--bg-color);
   position: relative;
+  width: 100%;
 }
 .formLandingTitle {
   font-size: 20px;
@@ -25,6 +26,24 @@
 .iconArrow {
   display: none;
 }
+.formLanding {
+  margin: 0 auto;
+  max-width: 460px;
+}
+
+@media screen and (min-width: 458px) {
+  .formLandingTitle {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .formLandingTitle {
+    text-align: center;
+  }
+  .transfer {
+    display: block;
+  }
+}
 
 @media screen and (min-width: 1440px) {
   .formLandingContainer {
@@ -35,16 +54,17 @@
     font-size: 28px;
     font-weight: 500;
     line-height: 39.2px;
-    text-align: center;
     margin: 0 auto 32px auto;
+  }
+  .formLanding {
+    width: 792px;
+    min-width: none;
+    margin-left: 0;
   }
   .formLandingTitleEmail {
     font-size: 28px;
     font-weight: 600;
     line-height: 39.2px;
-  }
-  .transfer {
-    display: inline;
   }
   .iconArrow {
     display: block;
@@ -52,5 +72,11 @@
     position: absolute;
     right: 228px;
     top: 115px;
+  }
+  .heroForm {
+    padding: 16px 24px;
+    width: 792px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }

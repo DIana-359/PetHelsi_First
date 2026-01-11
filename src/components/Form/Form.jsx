@@ -6,7 +6,6 @@ import clsx from "clsx";
 import ModalNotification from "../ModalNotification/ModalNotification";
 import style from "./Form.module.css";
 
-const publicKeyMAILCHIMP = import.meta.env.VITE_MAILCHIMP_API_KEY;
 const audienceId = import.meta.env.VITE_MAILCHIMP_AUDIENCE_ID;
 const server = import.meta.env.VITE_MAILCHIMP_SERVER;
 export default function Form({
@@ -21,9 +20,25 @@ export default function Form({
   const [notificationIsOpen, setNotificationIsOpen] = useState(false);
   const [openOptions, setOpenOptions] = useState(false);
   const [modalEmail, setModalEmail] = useState("");
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const validateEmail = email => {
+    if (!email) return "Email обовʼязковий";
+    if (!emailRegex.test(email)) return "Некоректний email";
+    return "";
+  };
 
   const getData = async event => {
     event.preventDefault();
+
+    const emailError = validateEmail(values.email);
+
+    if (emailError) {
+      setErrors({ email: emailError });
+      return;
+    }
+
+    setErrors({});
 
     const formData = new FormData();
     formData.append("EMAIL", values.email);
@@ -127,7 +142,12 @@ export default function Form({
             className={clsx(style.formLandingInput, style[customClassInput])}
             placeholder="Ваш E-mail"
             value={values.email}
-            onChange={ev => setValues({ ...values, email: ev.target.value })}
+            onChange={ev => {
+              setValues({ ...values, email: ev.target.value });
+              if (errors.email) {
+                setErrors({ ...errors, email: "" });
+              }
+            }}
             required
           />
           <Icon
@@ -137,6 +157,9 @@ export default function Form({
             height="24px"
             className={style.icon}
           />
+          {errors.email && (
+            <p className={style.error}>Введіть коректний email</p>
+          )}
         </div>
 
         <button

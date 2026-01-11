@@ -1,5 +1,5 @@
 .featuresContainer {
-  width: 343px;
+  width: 100%;
   padding: 48px 16px 44px 16px;
   display: flex;
   flex-direction: column;
@@ -32,15 +32,29 @@
   color: var(--text-color-white);
 }
 
+@media screen and (min-width: 768px) {
+  .featuresListItem {
+    padding: 38px 128px 38px 128px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .featuresText {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   .featuresContainer {
-    width: 1296px;
+    width: 1440px;
     padding: 100px 72px 100px 72px;
     flex-direction: row;
     gap: 24px;
   }
   .featuresListItem {
     padding: 72px 42px 54px 40px;
+    display: block;
   }
   .icon {
     width: 90px;
@@ -57,5 +71,6 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 22.4px;
+    text-align: left;
   }
 }

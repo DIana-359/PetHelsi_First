@@ -1,6 +1,7 @@
 import style from "./Header.module.css";
 import Icon from "../Icon/Icon";
 import sprateSistem from "../../assets/Images/sprite-sistem.svg";
+import clsx from "clsx";
 
 export default function Header({ modalIsOpen, setIsOpen }) {
   function openModal() {
@@ -11,7 +12,11 @@ export default function Header({ modalIsOpen, setIsOpen }) {
   }
 
   return (
-    <div className={style.headerContainer}>
+    <div
+      className={clsx(
+        style.headerContainer,
+        modalIsOpen && style.headerBorder
+      )}>
       <Icon
         sprite={sprateSistem}
         id={"icon-logo2"}
@@ -45,33 +50,18 @@ export default function Header({ modalIsOpen, setIsOpen }) {
           </ul>
         </nav>
 
-        {modalIsOpen ? (
-          <button
-            type="button"
-            onClick={closeModal}
-            className={style.buttonClose}>
-            <Icon
-              sprite={sprateSistem}
-              id={"icon-close"}
-              width="32px"
-              height="32px"
-              className={style.iconClose}
-            />
-          </button>
-        ) : (
-          <button
-            type="button"
-            onClick={openModal}
-            className={style.buttonMenu}>
-            <Icon
-              sprite={sprateSistem}
-              id={"icon-burger-for-header-mobile"}
-              width="32px"
-              height="32px"
-              className={style.iconBurger}
-            />
-          </button>
-        )}
+        <button
+          type="button"
+          className={style.buttonMenu}
+          onClick={modalIsOpen ? closeModal : openModal}>
+          <Icon
+            sprite={sprateSistem}
+            id={modalIsOpen ? "icon-close" : "icon-burger-for-header-mobile"}
+            width="32px"
+            height="32px"
+            className={style.iconClose}
+          />
+        </button>
       </div>
     </div>
   );

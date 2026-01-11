@@ -10,6 +10,9 @@
   border-radius: 24px;
 }
 .heroWrapper {
+  min-width: 375px;
+  max-width: 768px;
+  width: 100%;
   padding: 16px 16px 0 16px;
 }
 .heroContainer {
@@ -44,10 +47,9 @@
 .heroText {
   font-size: 14px;
   font-weight: 400;
-  line-height: 18.9px;
+  line-height: 1.35;
   text-align: left;
   color: var(--text-color-white);
-  width: 240px;
 }
 .heroDog {
   display: none;
@@ -56,9 +58,30 @@
   padding: 16px 12px;
   background-color: var(--bg-color);
   border-radius: 12px;
+  margin: 0 auto;
 }
 .imageContainer {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .notification {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .heroTitle {
+    text-align: left;
+    font-size: 38px;
+    line-height: 1.5;
+  }
+  .heroText {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+  }
+  .heroForm {
+    width: 659px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -66,11 +89,13 @@
     display: none;
   }
   .heroWrapper {
+    width: 1440px;
     padding: 0 72px;
     background-color: var(--bg-color);
+    max-width: none;
   }
   .heroContainer {
-    width: 1177px;
+    width: 1296px;
     padding: 64px 34px 64px 85px;
     border-radius: 40px;
     display: flex;
@@ -85,8 +110,12 @@
     font-size: 64px;
     line-height: 89.6px;
     margin-bottom: 16px;
+    text-align: left;
   }
   .time {
+    display: none;
+  }
+  .break {
     display: none;
   }
   .heroTitle::after {
@@ -105,13 +134,19 @@
   }
   .heroText {
     width: 765px;
+    max-width: none;
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 48px;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
   }
   .heroForm {
     padding: 16px 24px;
-    width: 792px;
+    width: 840px;
+    margin-left: 0;
+    margin-right: 0;
   }
   .imageContainer {
     display: block;
