@@ -20,11 +20,15 @@ export default function Form({
   const [notificationIsOpen, setNotificationIsOpen] = useState(false);
   const [openOptions, setOpenOptions] = useState(false);
   const [modalEmail, setModalEmail] = useState("");
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 
   const validateEmail = email => {
     if (!email) return "Email обовʼязковий";
-    if (!emailRegex.test(email)) return "Некоректний email";
+
+    if (!emailRegex.test(email)) {
+      return "Некоректний email";
+    }
+
     return "";
   };
 
@@ -32,7 +36,6 @@ export default function Form({
     event.preventDefault();
 
     const emailError = validateEmail(values.email);
-
     if (emailError) {
       setErrors({ email: emailError });
       return;
@@ -136,14 +139,22 @@ export default function Form({
 
         <div className={style.inputContainer}>
           <input
-            type="email"
+            type="text"
+            inputMode="email"
+            autoComplete="email"
             name="EMAIL"
             id="mce-EMAIL"
             className={clsx(style.formLandingInput, style[customClassInput])}
             placeholder="Ваш E-mail"
             value={values.email}
             onChange={ev => {
-              setValues({ ...values, email: ev.target.value });
+              const value = ev.target.value;
+
+              if (/[^\p{ASCII}]/u.test(value)) {
+                return;
+              }
+              setValues({ ...values, email: value });
+
               if (errors.email) {
                 setErrors({ ...errors, email: "" });
               }
